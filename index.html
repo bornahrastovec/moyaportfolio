@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moy's Garden</title>
+    <link rel="stylesheet" href="src/main.css" type="text/css">
+</head>
+<body>
+        <div class="m-intro">
+            <div class="m-content">
+                <h1 class="big">Hi, my name is Moya</h1>
+                <span class="sub" id="text">Welcome to my website</span><span class="caret" id="next" foo="0" onclick="nextInfo()"> > </span>
+             </div>
+        </div>
+        <div class="m-project-showcase">
+            <h1>Hello</h1>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+
+        <script>
+            var pos = parseInt(document.getElementById('next').getAttribute('foo'));
+            var arrayOfInfo = ["I'm a digital artist", "I'm from Ireland", "Take a look at my projects"];
+     
+            function nextInfo() {
+                debugger
+                document.getElementById('text').innerHTML = arrayOfInfo[pos];
+                pos+=1;
+                if(pos > 2) {
+                    pos = 0;
+                }
+            }
+         </script>
+     
+</body>
+</html>
